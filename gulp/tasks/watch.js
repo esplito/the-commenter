@@ -2,13 +2,14 @@ var gulp = require('gulp'),
 watch = require('gulp-watch'),
 browserSync = require('browser-sync').create();
 
+
 gulp.task('watch', function() {
 
   browserSync.init({
     notify: false,
-    server: {
-      baseDir: "app"
-    }
+    proxy: 'localhost/the-commenter/app/',
+    port: 8080,
+    open: true
   });
 
   watch('./app/index.php', function() {
@@ -16,7 +17,7 @@ gulp.task('watch', function() {
   });
 
   watch('./app/assets/styles/**/*.css', function() {
-    gulp.start('cssInject');
+    gulp.start('refreshCss');
   });
 
   watch('./app/assets/scripts/**/*.js', function(){
@@ -30,5 +31,9 @@ gulp.task('cssInject', ['styles'],function() {
 });
 
 gulp.task('scriptsRefresh', ['scripts'], function(){
+  browserSync.reload();
+});
+
+gulp.task('refreshCss', ['cssInject'], function(){
   browserSync.reload();
 });

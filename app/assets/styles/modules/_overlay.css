@@ -1,0 +1,10 @@
+@mixin atLarge{
+	.overlay{
+		background-color: rgba(51,51,51, 0.4);
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+}

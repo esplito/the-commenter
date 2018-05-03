@@ -1,0 +1,36 @@
+.side-image {
+	display: none;
+
+	@mixin atLarge{
+		position: relative;
+		display: block;
+		height: 100%;
+		background-image: url(../../assets/images/stil-251821-unsplash.jpg);
+		background: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 180%;
+		background-color: rgba(51,51,51, 0.5);
+
+		&__container{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			color: #FFF;
+		}
+
+		&__title {
+			font-family: 'Oswald', sans-serif;
+			font-size: 32px;
+			font-weight: 300;
+		}
+
+		&__subtitle {
+			font-weight: 300;
+			max-width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

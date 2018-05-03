@@ -19,6 +19,7 @@
     "browser-sync": "^2.24.2",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-connect-php": "^1.0.3",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^4.0.0",
     "gulp-modernizr": "^2.0.1",
