@@ -1,0 +1,28 @@
+.btn {
+	border-radius: 15px;
+	border: none;
+	font-size: 0.6875rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-left: auto;
+	margin-right: auto; 
+
+	&--default{
+		color: #FFF;
+		background-color: $mainBtnBg;
+		width: 150px;
+		padding: 10px;
+	}
+
+	&--smaller{
+		width: 120px;
+		font-size: 0.625rem;
+	}
+
+	&--alt{
+		margin-left: 20px;
+		padding: 7px;
+		background-color: #FFF;
+		border: 1px $borderDefault solid;
+	}
+}

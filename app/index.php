@@ -27,7 +27,7 @@
 		<div class="col__large-8 col__medium-12 auth">
 			<header>
 				<div class="auth-alt">
-					<p>Don't have an account?</p><button class="btn btn--small btn--alt">GET STARTED</button>
+					<p class="auth-alt__desc">Don't have an account?</p><button class="btn btn--smaller btn--alt">GET STARTED</button>
 				</div>
 			</header>
 			<div class="auth-form">
@@ -37,11 +37,14 @@
 					<form>
 						<div class="auth-form__row">
 						<label>EMAIL</label>
-						<input type="" name="email">
+						<input type="text" name="email">
 					</div>
-					<div class="auth-form__row">
+					<div class="auth-form__row auth-form__row--last">
 						<label>PASSWORD</label>
-						<input type="" name="password">
+						<input type="text" name="password">
+					</div>
+					<div class="auth-form__row auth-form__row--btn">
+						<button class="btn btn--default">SIGN IN</button>
 					</div>
 					</form>
 				</div>

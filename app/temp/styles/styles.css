@@ -344,6 +344,7 @@ template {
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
+	color: #333;
 }
 
 .side-image {
@@ -375,7 +376,7 @@ body {
 
 		.side-image__title {
 			font-family: 'Oswald', sans-serif;
-			font-size: 32px;
+			font-size: 2rem;
 			font-weight: 300;
 		}
 
@@ -547,29 +548,70 @@ body {
 
 }
 
+.auth-form input {
+		height: 1.375rem;
+		border: 1px #979797 solid;
+		padding: 5px;
+		font-size: 0.875rem;
+	}
+
+.auth-form label {
+		margin-bottom: 5px;
+		font-size: 0.6875rem;
+		font-weight: 700;
+		color: #232323;
+	}
+
 .auth-form__inner{
 		position: absolute;
 		-webkit-transform: translate(-50%,-50%);
 		        transform: translate(-50%,-50%);
   		top: 50%; 
   		left: 50%;
+		width: 70%;
+  		
+	}
+
+@media (min-width: 800px) {
+
+.auth-form__inner{
+			width: 40%
+  		
+	}
+	}
+
+@media (min-width: 1010px) {
+
+.auth-form__inner{
+  			width: 30%
+  		
+	}
 	}
 
 .auth-form__title{
-		font-size: 24px;
+		font-size: 1.5rem;
 		font-family: 'Oswald', sans-serif;
 		font-weight: 400;
+		color: #232323;
 	}
 
 .auth-form__subtitle{
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 400;
+		margin-bottom: 45px;
 	}
+
+.auth-form__row {
+		margin-bottom: 20px;
+	}
+
+.auth-form__row--last{
+			margin-bottom: 30px;
+		}
 
 .auth-form__row > * {
 		display: block;
 		width: 100%;
-		margin-bottom: 5px;
 	}
 
 .auth-alt {
@@ -577,6 +619,14 @@ body {
 	top: 5%;
 	right: 5%;
 }
+
+.auth-alt__desc{
+		font-size: 0.75rem;
+	}
+
+.auth-alt * {
+		display: inline-block;
+	}
 
 @media (min-width: 1010px) {
 	.overlay{
@@ -587,4 +637,33 @@ body {
 		height: 100%;
 		width: 100%;
 	}
+	}
+
+.btn {
+	border-radius: 15px;
+	border: none;
+	font-size: 0.6875rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn--default{
+		color: #FFF;
+		background-color: #3AA1B1;
+		width: 150px;
+		padding: 10px;
+	}
+
+.btn--smaller{
+		width: 120px;
+		font-size: 0.625rem;
+	}
+
+.btn--alt{
+		margin-left: 20px;
+		padding: 7px;
+		background-color: #FFF;
+		border: 1px #979797 solid;
 	}

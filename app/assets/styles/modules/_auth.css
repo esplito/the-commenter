@@ -19,28 +19,61 @@
 	height: 100%;
   	margin: 0 auto;
 
+	input {
+		height: 1.375rem;
+		border: 1px #979797 solid;
+		padding: 5px;
+		font-size: 0.875rem;
+	}
+
+	label {
+		margin-bottom: 5px;
+		font-size: 0.6875rem;
+		font-weight: 700;
+		color: $titleColor;
+	}
+
 	&__inner{
 		position: absolute;
 		transform: translate(-50%,-50%);
   		top: 50%; 
   		left: 50%;
+		width: 70%;
+
+		@mixin atMedium{
+			width: 40%;
+		}
+
+  		@mixin atLarge{
+  			width: 30%;
+  		}
+  		
 	}
 
 	&__title{
-		font-size: 24px;
+		font-size: 1.5rem;
 		font-family: 'Oswald', sans-serif;
 		font-weight: 400;
+		color: $titleColor;
 	}
 
 	&__subtitle{
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 400;
+		margin-bottom: 45px;
+	}
+	
+	&__row {
+		margin-bottom: 20px;
+
+		&--last{
+			margin-bottom: 30px;
+		}
 	}
 
 	&__row > * {
 		display: block;
 		width: 100%;
-		margin-bottom: 5px;
 	}
 
 }
@@ -49,5 +82,13 @@
 	position: absolute;
 	top: 5%;
 	right: 5%;
+
+	&__desc{
+		font-size: 0.75rem;
+	}
+
+	* {
+		display: inline-block;
+	}
 }
 
