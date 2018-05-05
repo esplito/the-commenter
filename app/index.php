@@ -5,13 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Login Page</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Oswald:300,400" rel="stylesheet">
-	<!-- build:css assets/styles/styles.css -->
 	 <link rel="stylesheet" type="text/css" href="temp/styles/styles.css">
-	<!-- endbuild -->
-
-	<!-- build:js assets/scripts/Vendor.js -->
-	<script src="temp/scripts/Vendor.js" type="text/javascript"></script>
-	<!-- endbuild -->
+	<script src="assets/scripts/jquery.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -32,27 +27,28 @@
 			</header>
 			<div class="auth-form">
 				<div class="auth-form__inner">
-					<h3 class="auth-form__title">Sign in to Commenter</h3>
-					<h4 class="auth-form__subtitle">Enter your details to get started</h4>
-					<form>
-						<div class="auth-form__row">
-						<label>EMAIL</label>
-						<input type="text" name="email">
-					</div>
-					<div class="auth-form__row auth-form__row--last">
-						<label>PASSWORD</label>
-						<input type="text" name="password">
-					</div>
-					<div class="auth-form__row auth-form__row--btn">
-						<button class="btn btn--default">SIGN IN</button>
-					</div>
-					</form>
+					<div class="auth-form__form">
+						<h3 class="auth-form__title">Sign in to Commenter</h3>
+						<h4 class="auth-form__subtitle">Enter your details to get started</h4>
+						<form id="login-form">
+							<div class="auth-form__row">
+							<label>EMAIL</label>
+							<input type="email" name="email" id="login-email" required>
+						</div>
+						<div class="auth-form__row auth-form__row--last">
+							<label>PASSWORD</label>
+							<input type="password" name="password" required>
+						</div>
+						<div class="auth-form__row auth-form__row--btn">
+							<button class="btn btn--default" type="submit">SIGN IN</button>
+						</div>
+						</form>
+					 </div>
+					<h3 class="auth-form__message">Login Successful</h3>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- build:js assets/scripts/App.js -->
-    <script src="temp/scripts/App.js" type="text/javascript"></script>
-  	<!-- endbuild -->
+    <script src="assets/scripts/App.js" type="text/javascript"></script>
 </body>
 </html>

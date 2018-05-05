@@ -50,6 +50,22 @@
   		
 	}
 
+	&__message{
+		display: none;
+	}
+
+	&__message--visible{
+		display: block;
+	}
+
+	&__message--success{
+		color: green;
+	}
+
+	&__message--error{
+		color: red;
+	}
+
 	&__title{
 		font-size: 1.5rem;
 		font-family: 'Oswald', sans-serif;
