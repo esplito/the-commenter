@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_POST['login'])){
+if(isset($_POST['reqType'])){
 	$servername = "localhost";
 	$username = "";
 	$password = "";
@@ -16,9 +16,12 @@ if(isset($_POST['login'])){
 
 	$email=$_POST['email'];
 	$pass=$_POST['password'];
-	$select_user=mysql_query("SELECT email, password from users where email='$email' and password='$pass'");
 
-	if($row=mysql_fetch_array($select_data)){
+	$sql_user= "SELECT email, password FROM users WHERE email='$email' AND password='$pass'";
+	$selected_user=$conn->query($sql_user);
+
+
+	if($row = $selected_user->fetch_assoc()){
 	 	$_SESSION['email']=$row['email'];
 	  	echo "success";
 	}

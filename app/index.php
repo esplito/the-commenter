@@ -44,7 +44,7 @@
 						</div>
 						</form>
 					 </div>
-					<h3 class="auth-form__message">Login Successful</h3>
+					<h3 class="auth-form__message auth-form__message--error"></h3>
 				</div>
 			</div>
 		</div>

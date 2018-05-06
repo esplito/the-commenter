@@ -12,7 +12,7 @@ function validateForm(form_type, form_e){
 						//check pw and email in db
 						$.ajax({
 					       type: "POST",
-					       url: 'login.php',
+					       url: './login.php',
 					       data: {
 					       	reqType: "login",
 					       	email: userLogin.email,
@@ -20,14 +20,18 @@ function validateForm(form_type, form_e){
 					       },
 					       success: function(response)
 					       {
-					          if (response=="success") {
-					          	$('.auth-form__message').toggleClass('auth-form__message--success'); 
-					            $('.auth-form__message').toggleClass('auth-form__message--visible');
+					          if (response==="success") {
+					          	//redirect user to posting feed
+					          	$('.auth-form__message').toggleClass('auth-form__message--visible');
+					          	console.log("Login successful");
 					          }
-					          else {
-					            $('.auth-form__message').toggleClass('auth-form__message--error');
-					            $('.auth-form__message').toggleClass('auth-form__message--visible');
+					          else{
+					          	$('.auth-form__message').text("Incorrect details");
+					          	if($('.auth-form__message--visible').length == 0){
+					          		$('.auth-form__message').toggleClass('auth-form__message--visible');
+					          	}
 					          }
+					          
 					       }
 					   });	
 
