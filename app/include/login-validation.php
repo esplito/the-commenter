@@ -17,12 +17,13 @@ if(isset($_POST['reqType'])){
 	$email=$_POST['email'];
 	$pass=$_POST['password'];
 
-	$sql_user= "SELECT email, password FROM users WHERE email='$email' AND password='$pass'";
+	$sql_user= "SELECT email, password, username FROM users WHERE email='$email' AND password='$pass'";
 	$selected_user=$conn->query($sql_user);
 
 
 	if($row = $selected_user->fetch_assoc()){
 	 	$_SESSION['email']=$row['email'];
+	 	$_SESSION['username']=$row['username'];
 	  	echo "success";
 	}
 	else{

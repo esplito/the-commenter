@@ -12,7 +12,7 @@ function validateForm(form_type, form_e){
 						//check pw and email in db
 						$.ajax({
 					       type: "POST",
-					       url: './include/login-validation.php',
+					       url: '../include/login-validation.php',
 					       data: {
 					       	reqType: "login",
 					       	email: userLogin.email,
