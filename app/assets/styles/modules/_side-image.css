@@ -12,6 +12,11 @@
 		background-size: 240%;
 		background-color: rgba(51,51,51, 0.5);
 
+		&--register{
+			background-image: url(../../assets/images/derick-anies-120213-unsplash.jpg);
+			background-size: 150%;
+		}
+
 		&__container{
 			position: absolute;
 			top: 50%;

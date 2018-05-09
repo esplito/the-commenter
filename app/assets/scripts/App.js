@@ -1,4 +1,4 @@
-function getById (id) {return document.getElementById('login-form')};
+function getById (id) {return document.getElementById(id)};
 
 function validateForm(form_type, form_e){
 	switch(form_type){
@@ -12,7 +12,7 @@ function validateForm(form_type, form_e){
 						//check pw and email in db
 						$.ajax({
 					       type: "POST",
-					       url: './include/login.php',
+					       url: './include/login-validation.php',
 					       data: {
 					       	reqType: "login",
 					       	email: userLogin.email,
@@ -40,7 +40,7 @@ function validateForm(form_type, form_e){
 				}
 			break;
 		case "register-form":
-
+			console.log("To be implemented.");
 			break;
 		case "post-form":
 
@@ -74,7 +74,18 @@ if(getById('login-form') !== null) {
 	});
 }
 
+if(getById('register-form') !== null) {
+	var register = getById('register-form');
+	$('#register-form').submit(function(e) {
+	    e.preventDefault(); // to stop the form from submitting
+	    if(validateForm("register-form", register) !== false){
+	    	this.submit();
+	    }
+	    else{
 
+	    }
+	});
+}
 
 
 
