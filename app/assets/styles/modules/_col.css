@@ -5,6 +5,11 @@
 	&--t-padding {
 		padding-top: 80px;
 	}
+	
+	&--t-b-padding{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 
 	&--gutters {
 		margin-right: -65px;
@@ -40,6 +45,11 @@
 			margin-bottom: 0;
 		}
 
+		&__medium-3 {
+			float: left;
+			width: 25%;
+		}
+
 		&__medium-4 {
 			float: left;
 			width: 33.33%;
@@ -55,12 +65,15 @@
 		}
 
 		&__medium-8 {
-			float: left;
 			width: 66.66%;
 		}
 
 		&__medium-8--smaller{
 			width: 63%;
+		}
+
+		&__medium-10{
+			width: 83.33%;
 		}
 
 		&__medium-12 {

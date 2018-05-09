@@ -357,16 +357,15 @@ body {
 		position: relative;
 		display: block;
 		height: 100%;
-		background-image: url(../../assets/images/stil-251821-unsplash.jpg);
+		background-image: url(../../assets/images/stil-251821-unsplash_s.jpg);
 		background: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: 240%;
-		background-color: rgba(51,51,51, 0.5)
+		background-size: 240%
 }
 
 		.side-image--register{
-			background-image: url(../../assets/images/derick-anies-120213-unsplash.jpg);
+			background-image: url(../../assets/images/derick-anies-120213-unsplash_s.jpg);
 			background-size: 150%;
 		}
 
@@ -403,6 +402,11 @@ body {
 		padding-top: 80px;
 	}
 
+.col--t-b-padding{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
 .col--gutters {
 		margin-right: -65px;
 	}
@@ -437,6 +441,11 @@ body {
 			margin-bottom: 0;
 		}
 
+		.col__medium-3 {
+			float: left;
+			width: 25%;
+		}
+
 		.col__medium-4 {
 			float: left;
 			width: 33.33%;
@@ -452,12 +461,15 @@ body {
 		}
 
 		.col__medium-8 {
-			float: left;
 			width: 66.66%;
 		}
 
 		.col__medium-8--smaller{
 			width: 63%;
+		}
+
+		.col__medium-10{
+			width: 83.33%;
 		}
 
 		.col__medium-12 {
@@ -699,3 +711,30 @@ body {
 		background-color: #FFF;
 		border: 1px #979797 solid;
 	}
+
+.header-container{
+	border-bottom: 2px solid #979797;
+}
+
+.feed-header{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
+
+}
+
+.feed-header__block--right{
+			text-align: right;
+		}
+
+.feed-header__block--left{
+			text-align: left;
+		}
+
+.feed-header__block--logo{
+			font-size: 1.25rem;
+			font-family: 'Oswald', sans-serif;
+			font-weight: 400;
+			color: #232323;
+		}

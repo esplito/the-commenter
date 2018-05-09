@@ -40,7 +40,7 @@
 							</div>
 							<div class="auth-form__row">
 								<label>USERNAME</label>
-								<input type="text" name="email" id="username" required>
+								<input type="text" name="username" id="username" required>
 							</div>
 							<div class="auth-form__row auth-form__row--last">
 								<label>PASSWORD</label>

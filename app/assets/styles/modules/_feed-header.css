@@ -1,0 +1,27 @@
+.feed-header{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
+
+	&__block{
+
+		&--right{
+			text-align: right;
+		}
+
+		&--left{
+			text-align: left;
+		}
+
+		&--logo{
+			font-size: 1.25rem;
+			font-family: 'Oswald', sans-serif;
+			font-weight: 400;
+			color: $titleColor;
+		}
+
+	}
+
+
+}
