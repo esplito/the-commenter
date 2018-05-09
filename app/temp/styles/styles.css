@@ -525,18 +525,42 @@ body {
 }
 
 .auth{
-	height: 100%;
+	height: 90%;
 	box-sizing: border-box;	
 }
 
 .auth--image{
 		display: none;
+		height: 100%;
 	}
 
 @media (min-width: 1010px) {
 		.auth--image{
 			display: block;
 		}
+	}
+
+.auth-header{
+	height: 10%;
+}
+
+.auth-header header {
+		height: 100%;
+		overflow: hidden;
+	}
+
+.auth-alt {
+	position: absolute;
+	top: 20px;
+	right: 5%;
+}
+
+.auth-alt__desc{
+		font-size: 0.75rem;
+	}
+
+.auth-alt * {
+		display: inline-block;
 	}
 
 .auth-form{
@@ -630,20 +654,6 @@ body {
 		width: 100%;
 	}
 
-.auth-alt {
-	position: absolute;
-	top: 5%;
-	right: 5%;
-}
-
-.auth-alt__desc{
-		font-size: 0.75rem;
-	}
-
-.auth-alt * {
-		display: inline-block;
-	}
-
 @media (min-width: 1010px) {
 	.overlay{
 		background-color: rgba(51,51,51, 0.4);
@@ -662,7 +672,8 @@ body {
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; 
+	cursor: pointer;
 }
 
 .btn--default{

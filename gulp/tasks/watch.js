@@ -12,7 +12,7 @@ gulp.task('watch', function() {
     open: true
   });
 
-  watch('./app/index.php', function() {
+  watch('./app/**/*.php', function() {
     browserSync.reload();
   });
 

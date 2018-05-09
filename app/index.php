@@ -19,12 +19,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="col__large-8 col__medium-12 auth">
+		<div class="col__large-8 col__medium-12 auth-header">
 			<header>
 				<div class="auth-alt">
-					<p class="auth-alt__desc">Don't have an account?</p><button class="btn btn--smaller btn--alt">GET STARTED</button>
+					<p class="auth-alt__desc">Don't have an account?</p><a href="register/"><button class="btn btn--smaller btn--alt">GET STARTED</button></a>
 				</div>
 			</header>
+		</div>
+		<div class="col__large-8 col__medium-12 auth">
 			<div class="auth-form">
 				<div class="auth-form__inner">
 					<div class="auth-form__form">
