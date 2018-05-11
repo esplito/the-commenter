@@ -22,8 +22,7 @@ function validateForm(form_type, form_e){
 					       {
 					          if (response==="success") {
 					          	//redirect user to posting feed
-					          	$('.auth-form__message').toggleClass('auth-form__message--visible');
-					          	console.log("Login successful");
+					          	window.location.href = "/the-commenter/app/";
 					          }
 					          else{
 					          	$('.auth-form__message').text("Incorrect details");

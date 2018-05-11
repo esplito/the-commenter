@@ -14,14 +14,14 @@
 	<div class="wrapper">
 		<header class="col__medium-12 header-container">
 			<div class="col__medium-8 feed-header">
-				<div class="col__medium-4 col--t-b-padding feed-header__block--left">
-					user_name
+				<div class="col__medium-4 col--t-b-padding feed-header__block feed-header__block--left">
+					<span>user_name</span>
 				</div>
-				<div class="col__medium-4 col--t-b-padding feed-header__block feed-header__block--logo">
-					Commenter
+				<div class="col__medium-4 col--t-b-padding feed-header__block">
+					<h1 class="feed-header__logo">Commenter</h1>
 				</div>
-				<div class="col__medium-4 col--t-b-padding feed-header__block--right">
-					Logout
+				<div class="col__medium-4 col--t-b-padding feed-header__block feed-header__block--right">
+					<span>Logout</span>
 				</div>
 			</div>
 		</header>

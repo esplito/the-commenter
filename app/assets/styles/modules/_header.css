@@ -1,3 +1,4 @@
 .header-container{
 	border-bottom: 2px solid $borderDefault;
+	height: 65px;
 }

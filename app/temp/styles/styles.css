@@ -714,15 +714,26 @@ body {
 
 .header-container{
 	border-bottom: 2px solid #979797;
+	height: 65px;
 }
 
 .feed-header{
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	height: 100%;
 
 
 }
+
+.feed-header h1, .feed-header span {
+		margin: 0;
+	}
+
+.feed-header__block{
+		padding: auto;
+
+	}
 
 .feed-header__block--right{
 			text-align: right;
@@ -732,9 +743,9 @@ body {
 			text-align: left;
 		}
 
-.feed-header__block--logo{
-			font-size: 1.25rem;
-			font-family: 'Oswald', sans-serif;
-			font-weight: 400;
-			color: #232323;
-		}
+.feed-header__logo{
+		font-size: 1.25rem;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400;
+		color: #232323;
+	}

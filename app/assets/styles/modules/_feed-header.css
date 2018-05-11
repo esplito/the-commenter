@@ -2,9 +2,15 @@
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	height: 100%;
+
+	h1, span {
+		margin: 0;
+	}
 
 
 	&__block{
+		padding: auto;
 
 		&--right{
 			text-align: right;
@@ -14,13 +20,13 @@
 			text-align: left;
 		}
 
-		&--logo{
-			font-size: 1.25rem;
-			font-family: 'Oswald', sans-serif;
-			font-weight: 400;
-			color: $titleColor;
-		}
+	}
 
+	&__logo{
+		font-size: 1.25rem;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400;
+		color: $titleColor;
 	}
 
 
