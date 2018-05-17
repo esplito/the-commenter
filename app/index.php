@@ -11,20 +11,30 @@
 	<script src="assets/scripts/jquery.js" type="text/javascript"></script>
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper wrapper--posts">
 		<header class="col__medium-12 header-container">
-			<div class="col__medium-8 feed-header">
-				<div class="col__medium-4 col--t-b-padding feed-header__block feed-header__block--left">
-					<span>user_name</span>
+			<div class="col__small-10 col__medium-8 feed-header">
+				<div class="col__small-3 col__medium-4 col--t-padding-small feed-header__block feed-header__block--left">
+					<span class="user--active">user_name</span>
 				</div>
-				<div class="col__medium-4 col--t-b-padding feed-header__block">
+				<div class="col__small-6 col__medium-4 feed-header__block">
 					<h1 class="feed-header__logo">Commenter</h1>
 				</div>
-				<div class="col__medium-4 col--t-b-padding feed-header__block feed-header__block--right">
-					<span>Logout</span>
+				<div class="col__small-3 col__medium-4 col--t-padding-small feed-header__block feed-header__block--right">
+					<span class="">Logout</span>
 				</div>
 			</div>
 		</header>
+		<div class="container container--t-margin col__medium-6 col__medium-6--no-f">
+			<div class="post post__add">
+				<form class="post__form">
+					<textarea maxlength="180" placeholder="What's on your mind? Type it here..."></textarea>
+				</form>
+			</div>
+			<div class="post post__feed">
+
+			</div>
+		</div>
 	</div>
     <script src="assets/scripts/App.js" type="text/javascript"></script>
 </body>
