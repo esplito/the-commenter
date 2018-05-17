@@ -1,16 +1,18 @@
 .feed-header{
 	text-align: center;
 	margin-left: auto;
-	margin-right: auto;
-	height: 100%;
+	margin-right: auto;	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 
-	h1, span {
+	h1{
 		margin: 0;
 	}
 
-
 	&__block{
-		padding: auto;
+		min-height: 23px;
 
 		&--right{
 			text-align: right;

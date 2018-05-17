@@ -3,4 +3,8 @@
 	top: 0;
 	bottom: 0;
 	width: 100%;
+
+	&--posts{
+		background-color: rgb(240, 240, 244);
+	}
 }

@@ -1,6 +1,5 @@
 .auth{
 	height: 90%;
-	box-sizing: border-box;
 
 	&--image{
 		display: none;

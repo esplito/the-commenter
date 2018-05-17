@@ -2,8 +2,13 @@
 
 	@mixin clearfix;
 	
+
 	&--t-padding {
 		padding-top: 80px;
+	}
+
+	&--t-padding-small{
+		padding-top: 3px;
 	}
 	
 	&--t-b-padding{
@@ -38,6 +43,45 @@
 	&__b-margin-until-medium {
 		margin-bottom: 1rem;
 	}
+
+	&__small-3 {
+		float: left;
+		width: 25%;
+	}
+
+	&__small-4 {
+		float: left;
+		width: 33.33%;
+	}
+
+	&__small-4--larger {
+		width: 37%;
+	}
+	
+	&__small-6{
+		float: left;
+		width: 50%;
+	}
+
+	&__small-6--no-f{
+		float: none;
+	}
+
+	&__small-8 {
+		width: 66.66%;
+	}
+
+	&__small-8--smaller{
+		width: 63%;
+	}
+
+	&__small-10{
+		width: 83.33%;
+	}
+
+	&__small-12 {
+		width: 100%;
+	}
 	
 	@mixin atMedium {
 
@@ -64,6 +108,10 @@
 			width: 50%;
 		}
 
+		&__medium-6--no-f{
+			float: none;
+		}
+
 		&__medium-8 {
 			width: 66.66%;
 		}
@@ -77,9 +125,9 @@
 		}
 
 		&__medium-12 {
-			float: left;
 			width: 100%;
 		}
+
 	}
 
 	@mixin atLarge {

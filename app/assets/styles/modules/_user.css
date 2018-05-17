@@ -1,0 +1,7 @@
+.user{
+
+	&--active{
+		font-weight: 700;
+	}
+
+}
