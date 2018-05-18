@@ -8,7 +8,6 @@ $(document).ready(function() {
 					userLogin.email = form_e.elements["email"].value;
 					userLogin.pw = form_e.elements["password"].value;
 					if(validateEmail(userLogin.email) === true){
-
 						if(userLogin.pw != ""){
 							//check pw and email in db
 							$.ajax({
@@ -81,7 +80,6 @@ $(document).ready(function() {
 		return false;
 	}
 
-
 	function validateEmail(email) {
 		if (!email.match(/[a-zA-Z0-9._-]+[@][a-zA-Z]+\.[a-zA-Z]+/g)){
 			return false;
@@ -136,6 +134,5 @@ $(document).ready(function() {
 	   });	
 	    return false;
 	});
-	
-
+				
 });
