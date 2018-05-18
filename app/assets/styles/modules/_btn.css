@@ -7,10 +7,10 @@
 	margin-left: auto;
 	margin-right: auto; 
 	cursor: pointer;
+	background-color: $mainBtnBg;
+	color: #FFF;
 
 	&--default{
-		color: #FFF;
-		background-color: $mainBtnBg;
 		width: 150px;
 		padding: 10px;
 	}
@@ -20,7 +20,13 @@
 		font-size: 0.625rem;
 	}
 
+	&--medium{
+		width: 120px;
+		padding: 7px;
+	}
+
 	&--alt{
+		color: $mainColor;
 		margin-left: 20px;
 		padding: 7px;
 		background-color: #FFF;

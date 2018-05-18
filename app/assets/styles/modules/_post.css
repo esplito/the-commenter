@@ -15,6 +15,24 @@
 
 	&__feed{
 		margin-top: 20px;
+		border: 2px solid $borderDefault;
+		min-height: 300px;
+	}
+
+	&__row{
+		padding: 10px;
+		font-size: 0.75rem;
+		border-bottom: 1px solid $borderDefault;
+	}
+	
+	&__btn-holder{
+		text-align: right;
+		padding-right: 5px;
+	}
+
+	&__date{
+		font-weight: 500;
+		margin-bottom: 5px;
 	}
 
 	textarea{
@@ -25,5 +43,12 @@
 		padding: 5px;
 		border: none;
 		overflow: hidden;
+		-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+		box-shadow: none;
+	}
+
+	textarea:focus{
+		outline: none;
 	}
 }

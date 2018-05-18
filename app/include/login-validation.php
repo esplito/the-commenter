@@ -16,6 +16,9 @@ if(isset($_POST['reqType'])){
 	} 
 
 	$email=$_POST['email'];
+	//if (hash_equals($hashed_pw, crypt($password, $hashed_pw))) {
+	   //echo "Verified!";
+	//}
 	$pass=$_POST['password'];
 
 	$sql_user= "SELECT email, password, username FROM users WHERE email='$email' AND password='$pass'";

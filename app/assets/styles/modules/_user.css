@@ -1,7 +1,19 @@
 .user{
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1;
+
+	&__logout{
+		cursor: pointer;
+	}
 
 	&--active{
-		font-weight: 700;
+		font-size: 1rem;
+		line-height: 1.15;
+	}
+
+	&--post{
+		margin-top: 5px;
 	}
 
 }
