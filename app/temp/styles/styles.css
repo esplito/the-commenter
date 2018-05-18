@@ -816,6 +816,7 @@ body {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .user--active{
 		font-weight: 700;
 =======
@@ -838,7 +839,27 @@ body {
 .user--post{
 		margin-top: 5px;
 >>>>>>> post-feed-page
+=======
+.user{
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1;
+
+}
+
+.user__logout{
+		cursor: pointer;
 	}
+
+.user--active{
+		font-size: 1rem;
+		line-height: 1.15;
+>>>>>>> f54a2800f92d4f2f91fed719ba0bc6eac65ade6f
+	}
+
+.user--post{
+		margin-top: 5px;
+}
 
 .container{
 	margin-left: auto;
@@ -867,8 +888,6 @@ body {
 
 .post__feed{
 		margin-top: 20px;
-<<<<<<< HEAD
-=======
 		border: 2px solid #979797;
 		min-height: 300px;
 	}
@@ -887,7 +906,6 @@ body {
 .post__date{
 		font-weight: 500;
 		margin-bottom: 5px;
->>>>>>> post-feed-page
 	}
 
 .post textarea{
@@ -898,12 +916,9 @@ body {
 		padding: 5px;
 		border: none;
 		overflow: hidden;
-<<<<<<< HEAD
-=======
 		box-shadow: none;
 	}
 
 .post textarea:focus{
 		outline: none;
->>>>>>> post-feed-page
 	}
