@@ -15,24 +15,31 @@
 		<header class="col__medium-12 header-container">
 			<div class="col__small-10 col__medium-8 feed-header">
 				<div class="col__small-3 col__medium-4 col--t-padding-small feed-header__block feed-header__block--left">
-					<span class="user--active">user_name</span>
+					<span class="user user--active">user_name</span>
 				</div>
 				<div class="col__small-6 col__medium-4 feed-header__block">
 					<h1 class="feed-header__logo">Commenter</h1>
 				</div>
 				<div class="col__small-3 col__medium-4 col--t-padding-small feed-header__block feed-header__block--right">
-					<span class="">Logout</span>
+					<span class="user__logout" id="logout">Logout</span>
 				</div>
 			</div>
 		</header>
 		<div class="container container--t-margin col__medium-6 col__medium-6--no-f">
 			<div class="post post__add">
 				<form class="post__form">
-					<textarea maxlength="180" placeholder="What's on your mind? Type it here..."></textarea>
+					<textarea maxlength="220" placeholder="What's on your mind? Type it here..."></textarea>
+					<div class="post__btn-holder">
+						<button class="btn btn--medium">COMMENT</button>
+					</div>
 				</form>
 			</div>
 			<div class="post post__feed">
-
+				<div class="post__row" data-post-id="0">
+					<h2 class="user user--post">user_name</h2>
+					<p class="post__text">Lorem ipsum dolor amet ennui man braid blue bottle ramps thundercats gochujang bespoke, quinoa shoreditch slow-carb mumblecore polaroid vaporware lumbersexual. Selvage yuccie DIY succulents. Keffiyeh knausgaard cornhole.</p>
+					<p class="post__date">2018-04-30 15:17</p>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,13 +1,6 @@
 $(document).ready(function() {
 	function getById (id) {return document.getElementById(id)};
 
-	$('textarea').keypress( function(e){
-		if($(this)[0].scrollHeight > 100){
-			$(this).val($(this).val().replace(/[\r\n\v]$/g, ''));
-			return false;
-		}
-	});
-
 	function validateForm(form_type, form_e){
 		switch(form_type){
 			case "login-form":
@@ -47,7 +40,37 @@ $(document).ready(function() {
 					}
 				break;
 			case "register-form":
-				console.log("To be implemented.");
+				var userReg = {};
+				userReg.email = form_e.elements["email"].value;
+				userReg.username = form_e.elements["username"].value;
+				userReg.pw = form_e.elements["password"].value;
+				if(validateEmail(userReg.email) === true){
+					if(userReg.pw != ""){
+						$.ajax({
+					       type: "POST",
+					       url: '../include/register-process.php',
+					       data: {
+					       	email: userReg.email,
+					       	username: userReg.username,
+							password: userReg.pw
+					       },
+					       success: function(response)
+					       {
+					          if (response==="success") {
+					          	//redirect user to posting feed
+					          	console.log("user created");
+					          }
+					          else if(response==="email exists"){
+					          	console.log("email already in use.");
+					          }
+					          else{
+					          	console.log("username already in use.");
+					          }
+					          
+					       }
+					   });
+					}
+				}
 				break;
 			case "post-form":
 
@@ -67,6 +90,13 @@ $(document).ready(function() {
 			return true;
 		}
 	}
+
+	$('textarea').keypress( function(e){
+		if($(this)[0].scrollHeight > 100){
+			$(this).val($(this).val().replace(/[\r\n\v]$/g, ''));
+			return false;
+		}
+	});
 
 	if(getById('login-form') !== null) {
 		var login = getById('login-form');
@@ -93,5 +123,19 @@ $(document).ready(function() {
 		    }
 		});
 	}
+
+	$('#logout').click(function(e) {
+	    e.preventDefault();
+	    $.ajax({
+	       type: "POST",
+	       url: 'include/logout-process.php',
+	       success: function(response)
+	       {
+	          window.location.href = "/the-commenter/app/login/"
+	       }
+	   });	
+	    return false;
+	});
+	
 
 });

@@ -643,7 +643,7 @@ body {
 }
 
 .auth-form input {
-		height: 1.375rem;
+		height: 1.875rem;
 		border: 1px #979797 solid;
 		padding: 5px;
 		font-size: 0.875rem;
@@ -744,11 +744,11 @@ body {
 	margin-left: auto;
 	margin-right: auto; 
 	cursor: pointer;
+	background-color: #3AA1B1;
+	color: #FFF;
 }
 
 .btn--default{
-		color: #FFF;
-		background-color: #3AA1B1;
 		width: 150px;
 		padding: 10px;
 	}
@@ -758,7 +758,13 @@ body {
 		font-size: 0.625rem;
 	}
 
+.btn--medium{
+		width: 120px;
+		padding: 7px;
+	}
+
 .btn--alt{
+		color: #333;
 		margin-left: 20px;
 		padding: 7px;
 		background-color: #FFF;
@@ -809,8 +815,24 @@ body {
 		color: #232323;
 	}
 
+.user{
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 1;
+
+}
+
+.user__logout{
+		cursor: pointer;
+	}
+
 .user--active{
-		font-weight: 700;
+		font-size: 1rem;
+		line-height: 1.15;
+	}
+
+.user--post{
+		margin-top: 5px;
 	}
 
 .container{
@@ -840,6 +862,24 @@ body {
 
 .post__feed{
 		margin-top: 20px;
+		border: 2px solid #979797;
+		min-height: 300px;
+	}
+
+.post__row{
+		padding: 10px;
+		font-size: 0.75rem;
+		border-bottom: 1px solid #979797;
+	}
+
+.post__btn-holder{
+		text-align: right;
+		padding-right: 5px;
+	}
+
+.post__date{
+		font-weight: 500;
+		margin-bottom: 5px;
 	}
 
 .post textarea{
@@ -850,4 +890,9 @@ body {
 		padding: 5px;
 		border: none;
 		overflow: hidden;
+		box-shadow: none;
+	}
+
+.post textarea:focus{
+		outline: none;
 	}
