@@ -815,11 +815,6 @@ body {
 		color: #232323;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.user--active{
-		font-weight: 700;
-=======
 .user{
 	font-weight: 700;
 	font-size: 0.875rem;
@@ -838,28 +833,7 @@ body {
 
 .user--post{
 		margin-top: 5px;
->>>>>>> post-feed-page
-=======
-.user{
-	font-weight: 700;
-	font-size: 0.875rem;
-	line-height: 1;
-
-}
-
-.user__logout{
-		cursor: pointer;
 	}
-
-.user--active{
-		font-size: 1rem;
-		line-height: 1.15;
->>>>>>> f54a2800f92d4f2f91fed719ba0bc6eac65ade6f
-	}
-
-.user--post{
-		margin-top: 5px;
-}
 
 .container{
 	margin-left: auto;
