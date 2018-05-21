@@ -1,6 +1,41 @@
 $(document).ready(function() {
 	function getById (id) {return document.getElementById(id)};
 
+	function toggleError(){
+		if($('.auth-form__message--visible').length == 0){
+      		$('.auth-form__message').toggleClass('auth-form__message--visible');
+      	}
+	}
+
+	function displayError(error_type){
+		switch(error_type){
+			case 'l':
+				$('.auth-form__message').text("Incorrect details");
+				toggleError();
+				break;
+			case 'e':
+				$('.auth-form__message').text("Email already exists.");
+		      	toggleError();
+		      	break;
+	      	case 'u':
+	      		$('.auth-form__message').text("Username already exists.");
+		      	toggleError();
+	      		break;
+      		case 'p':
+      			$('.auth-form__message').text("Password has to be atleast 5 characters.");
+		      	toggleError();
+		      	break;
+		    default:
+		    	$('.auth-form__message').text("An error occured.");
+		      	toggleError();
+
+		}
+	}
+
+	function toggleConfirmationScreen(){
+
+	}
+
 	function validateForm(form_type, form_e){
 		switch(form_type){
 			case "login-form":
@@ -25,10 +60,7 @@ $(document).ready(function() {
 						          	window.location.href = "/the-commenter/app/";
 						          }
 						          else{
-						          	$('.auth-form__message').text("Incorrect details");
-						          	if($('.auth-form__message--visible').length == 0){
-						          		$('.auth-form__message').toggleClass('auth-form__message--visible');
-						          	}
+						          	displayError('l');
 						          }
 						          
 						       }
@@ -60,10 +92,13 @@ $(document).ready(function() {
 					          	console.log("user created");
 					          }
 					          else if(response==="email exists"){
-					          	console.log("email already in use.");
+					          	displayError('e');
+					          }
+					          else if(response==="pw short"){
+					          	displayError('p');
 					          }
 					          else{
-					          	console.log("username already in use.");
+					          	displayError('u');
 					          }
 					          
 					       }
