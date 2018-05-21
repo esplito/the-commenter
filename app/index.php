@@ -15,7 +15,7 @@
 		<header class="col__medium-12 header-container">
 			<div class="col__small-10 col__medium-8 feed-header">
 				<div class="col__small-3 col__medium-4 col--t-padding-small feed-header__block feed-header__block--left">
-					<span class="user user--active">user_name</span>
+					<span class="user user--active"><?php echo $_SESSION['username']?></span>
 				</div>
 				<div class="col__small-6 col__medium-4 feed-header__block">
 					<h1 class="feed-header__logo">Commenter</h1>

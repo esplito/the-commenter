@@ -1,3 +1,4 @@
+<?php include 'include/redirect-loggedin.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
