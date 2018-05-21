@@ -15,11 +15,11 @@ if(isset($_POST['reqType'])){
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 
-	$email=$_POST['email'];
+	$email= mysqli_real_escape_string($conn, $_POST['email']);
 	//if (hash_equals($hashed_pw, crypt($password, $hashed_pw))) {
 	   //echo "Verified!";
 	//}
-	$pass=$_POST['password'];
+	$pass= mysqli_real_escape_string($conn, $_POST['password']);
 
 	$sql_user= "SELECT email, password, username FROM users WHERE email='$email' AND password='$pass'";
 	$selected_user=$conn->query($sql_user);
