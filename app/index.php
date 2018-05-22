@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Login Page</title>
+	<title>Post Page</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Oswald:300,400" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="temp/styles/styles.css">
 	<script src="assets/scripts/jquery.js" type="text/javascript"></script>
@@ -25,10 +25,10 @@
 				</div>
 			</div>
 		</header>
-		<div class="container container--t-margin col__medium-6 col__medium-6--no-f">
+		<div class="container container--t-margin container--padding col__medium-6 col__medium-6--no-f">
 			<div class="post post__add">
-				<form class="post__form">
-					<textarea maxlength="220" placeholder="What's on your mind? Type it here..."></textarea>
+				<form class="post__form" id="post-form">
+					<textarea maxlength="220" name="post" placeholder="What's on your mind? Type it here..."></textarea>
 					<div class="post__btn-holder">
 						<button class="btn btn--medium">COMMENT</button>
 					</div>

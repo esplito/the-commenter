@@ -72,9 +72,21 @@
   		}
   		
 	}
+	
+	&__form{
+		display: block;
+	}
+
+	&__form--hidden{
+		display: none;
+	}
 
 	&__message{
 		display: none;
+		text-align: center;
+		font-size: 1rem;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400;
 	}
 
 	&__message--visible{
@@ -113,6 +125,15 @@
 	&__row > * {
 		display: block;
 		width: 100%;
+	}
+
+	&__continue{
+		text-align: center;
+		display: none;
+	}
+
+	&__continue--visible{
+		display: block;
 	}
 
 }

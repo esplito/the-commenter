@@ -5,4 +5,12 @@
 	&--t-margin{
 		margin-top: 20px;
 	}
+
+	&--padding{
+		padding: 0 10px 0 10px;
+	}
+
+	@mixin atLarge{
+		padding: 0;
+	}
 }

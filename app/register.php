@@ -50,7 +50,10 @@
 							</div>
 						</form>
 					 </div>
-					<h3 class="auth-form__message auth-form__message--error"></h3>
+					<h3 class="auth-form__message"></h3>
+					<div class="auth-form__continue">
+						<button class="btn btn--default" id="continue-btn">CONTINUE</button>
+					</div>
 				</div>
 			</div>
 		</div>

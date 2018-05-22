@@ -587,8 +587,8 @@ body {
 .wrapper{
 	position: absolute;
 	top: 0;
-	bottom: 0;
 	width: 100%;
+	min-height: 100%;
 }
 
 .wrapper--posts{
@@ -682,8 +682,20 @@ body {
 	}
 	}
 
+.auth-form__form{
+		display: block;
+	}
+
+.auth-form__form--hidden{
+		display: none;
+	}
+
 .auth-form__message{
 		display: none;
+		text-align: center;
+		font-size: 1rem;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400;
 	}
 
 .auth-form__message--visible{
@@ -722,6 +734,15 @@ body {
 .auth-form__row > * {
 		display: block;
 		width: 100%;
+	}
+
+.auth-form__continue{
+		text-align: center;
+		display: none;
+	}
+
+.auth-form__continue--visible{
+		display: block;
 	}
 
 @media (min-width: 1010px) {
@@ -842,6 +863,17 @@ body {
 
 .container--t-margin{
 		margin-top: 20px;
+	}
+
+.container--padding{
+		padding: 0 10px 0 10px;
+	}
+
+@media (min-width: 1010px) {
+
+.container{
+		padding: 0
+}
 	}
 
 .post{
