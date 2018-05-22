@@ -1,18 +1,26 @@
 <?php
 session_start();
 
+function unique_salt(){
+	return substr(md5(mt_rand()), 0, 22);
+}
+
+function hash_pw($password, $salt){
+	return crypt($password, '$2a$07$'.$salt);
+}
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	if(isset($_POST['reqType'])){
 
 		if(preg_match("/[a-zA-Z0-9._-]+[@][a-zA-Z]+\.[a-zA-Z]+/", $_POST['email']) > 0){
 			$servername = "localhost";
-			$username = "";
-			$password = "";
+			$user = "";
+			$pw = "";
 			$dbname = "test";
 
 
 			// Create connection
-			$conn = new mysqli($servername, $username, $password, $dbname);
+			$conn = new mysqli($servername, $user, $pw, $dbname);
 
 			// Check connection
 			if ($conn->connect_error) {
@@ -20,19 +28,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			} 
 
 			$email= mysqli_real_escape_string($conn, $_POST['email']);
-			//if (hash_equals($hashed_pw, crypt($password, $hashed_pw))) {
-			   //echo "Verified!";
-			//}
 			$pass= mysqli_real_escape_string($conn, $_POST['password']);
 
-			$sql_user= "SELECT email, password, username FROM users WHERE email='$email' AND password='$pass'";
+			$sql_user= "SELECT email, password, username FROM users WHERE email='$email'";
 			$selected_user=$conn->query($sql_user);
 
 
 			if($row = $selected_user->fetch_assoc()){
-			 	$_SESSION['email']=$row['email'];
-			 	$_SESSION['username']=$row['username'];
-			  	echo "success";
+				$full_salt = substr($row['password'], 0, 29);
+				if (hash_equals($row['password'], crypt($pass, $full_salt))) {
+				    $_SESSION['email']=$row['email'];
+				 	$_SESSION['username']=$row['username'];
+				  	echo "success";
+				}
 			}
 			else{
 				echo "fail";

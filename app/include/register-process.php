@@ -53,10 +53,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 				}
 			}
 			else{
-				echo "success";
+				$hashed_pw = hash_pw($_POST['password'], unique_salt());
+				$sql_createacc = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_pw')";
+
+				if ($conn->query($sql_createacc) === TRUE) {
+				    echo "success";
+				} else {
+				    echo "Error: " . $sql_createacc . "<br>" . $conn->error;
+				}
+				
 			}
 
-			$hashed_pw = hash_pw($_POST['password'], unique_salt());
+			
 
 			$conn->close();
 		}
