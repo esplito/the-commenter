@@ -39,6 +39,7 @@
 					<h2 class="user user--post">user_name</h2>
 					<p class="post__text">Lorem ipsum dolor amet ennui man braid blue bottle ramps thundercats gochujang bespoke, quinoa shoreditch slow-carb mumblecore polaroid vaporware lumbersexual. Selvage yuccie DIY succulents. Keffiyeh knausgaard cornhole.</p>
 					<p class="post__date">2018-04-30 15:17</p>
+					<?php //include 'include/display-posts.php' ?>
 				</div>
 			</div>
 		</div>

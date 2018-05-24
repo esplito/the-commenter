@@ -52,6 +52,30 @@ $(document).ready(function() {
       	$('.auth-form__continue').toggleClass('auth-form__continue--visible');
 	}
 
+	function displayPost(post){
+		//to be implemented. Need to manipulate html.
+		console.log(post);
+	}
+
+	function getPosts(){
+		$.ajax({
+	       type: "POST",
+	       url: 'include/get-posts.php',
+	       datatype: 'json',
+	       data: {
+	       	getposts: 'true'
+	       },
+	       success: function(response)
+	       {
+	       	  var allposts = JSON.parse(response);
+	          for (var i = 0; i < allposts.length; i++) {
+	          	displayPost(allposts[i]);
+	          }
+	       }
+	    });	
+	}
+
+
 	function validateForm(form_type, form_e){
 		switch(form_type){
 			case "login-form":
@@ -80,10 +104,8 @@ $(document).ready(function() {
 						          }
 						          
 						       }
-						   });	
-
-						}
-						
+						    });	
+						}					
 					}
 					else{
 						displayError('i');
@@ -170,7 +192,7 @@ $(document).ready(function() {
 				       success: function(response)
 				       {
 				          if (response==="success") {
-				          	//redirect user to posting feed
+				          	//post added to db
 				          	console.log("post added to db");
 				          }			          
 				       }
@@ -239,6 +261,7 @@ $(document).ready(function() {
 	}
 
 	if(getById('post-form') !== null) {
+		getPosts();
 		var post = getById('post-form');
 		$('#post-form').submit(function(e) {
 		    e.preventDefault(); // to stop the form from submitting
