@@ -6,10 +6,9 @@
 		display: block;
 		height: 100%;
 		background-image: url(../../assets/images/stil-251821-unsplash_s.jpg);
-		background: cover;
+		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: 240%;
 
 		&--register{
 			background-image: url(../../assets/images/derick-anies-120213-unsplash_s.jpg);

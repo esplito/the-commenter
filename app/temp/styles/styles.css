@@ -362,10 +362,9 @@ body {
 		display: block;
 		height: 100%;
 		background-image: url(../../assets/images/stil-251821-unsplash_s.jpg);
-		background: cover;
+		background-size: cover;
 		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 240%
+		background-repeat: no-repeat
 }
 
 		.side-image--register{
@@ -587,12 +586,14 @@ body {
 .wrapper{
 	position: absolute;
 	top: 0;
+	bottom: 0;
 	width: 100%;
 	min-height: 100%;
 }
 
 .wrapper--posts{
 		background-color: rgb(240, 240, 244);
+		bottom: auto;
 	}
 
 .auth{

@@ -1,7 +1,6 @@
 .col {
 
 	@mixin clearfix;
-	
 
 	&--t-padding {
 		padding-top: 80px;
