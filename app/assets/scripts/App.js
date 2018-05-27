@@ -52,9 +52,17 @@ $(document).ready(function() {
       	$('.auth-form__continue').toggleClass('auth-form__continue--visible');
 	}
 
-	function displayPost(post){
+	function displayPost(post, postCounter){
 		//to be implemented. Need to manipulate html.
-		console.log(post);
+		if(post !== undefined){
+			$('.post__feed').append(function(){
+				var user = '<h2 class="user user--post">' + post.user + '</h2>';
+				var p_date = '<p class="post__date">' + post.p_date + '</p>';
+				var p_text = '<p class="post__text">' + post.post + '</p>';
+
+				return '<div class="post__row" data-post-id="'+ postCounter +'">' + user + p_text + p_date + '</div>';
+			});
+		}
 	}
 
 	function getPosts(){
@@ -68,9 +76,13 @@ $(document).ready(function() {
 	       success: function(response)
 	       {
 	       	  var allposts = JSON.parse(response);
-	          for (var i = 0; i < allposts.length; i++) {
-	          	displayPost(allposts[i]);
+	       	  var postCounter = 0;
+	       	  $('.post__feed').html('');
+	          for (var i = allposts.length; i >= 0; i--) {
+	          	displayPost(allposts[i], postCounter);
+	          	postCounter++;
 	          }
+
 	       }
 	    });	
 	}
@@ -194,6 +206,7 @@ $(document).ready(function() {
 				          if (response==="success") {
 				          	//post added to db
 				          	console.log("post added to db");
+				          	getPosts();
 				          }			          
 				       }
 				   });	
