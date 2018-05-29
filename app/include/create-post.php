@@ -13,19 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			$timestamp = date("Y-m-d h:i");
 			$username = $_SESSION['username'];
 
-			$servername = "localhost";
-			$user = "";
-			$pw = "";
-			$dbname = "test";
-
-
-			// Create connection
-			$conn = new mysqli($servername, $user, $pw, $dbname);
-
-			// Check connection
-			if ($conn->connect_error) {
-			    die("Connection failed: " . $conn->connect_error);
-			} 
+			require 'connect.php';
 
 			$post= mysqli_real_escape_string($conn, $_POST['post']);
 

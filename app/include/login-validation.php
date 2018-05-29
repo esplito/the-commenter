@@ -13,19 +13,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	if(isset($_POST['reqType'])){
 
 		if(preg_match("/[a-zA-Z0-9._-]+[@][a-zA-Z]+\.[a-zA-Z]+/", $_POST['email']) > 0){
-			$servername = "localhost";
-			$user = "";
-			$pw = "";
-			$dbname = "test";
-
-
-			// Create connection
-			$conn = new mysqli($servername, $user, $pw, $dbname);
-
-			// Check connection
-			if ($conn->connect_error) {
-			    die("Connection failed: " . $conn->connect_error);
-			} 
+			
+			require 'connect.php';
 
 			$email= mysqli_real_escape_string($conn, $_POST['email']);
 			$pass= mysqli_real_escape_string($conn, $_POST['password']);

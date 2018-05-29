@@ -10,39 +10,6 @@
 		padding-top: 3px;
 	}
 	
-	&--t-b-padding{
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-
-	&--gutters {
-		margin-right: -65px;
-	}
-	
-	&--gutters-large{
-		margin-right: -100px;
-	}
-
-	&--gutters-small{
-		margin-right: -45px;
-	}
-
-	&--gutters > div {
-		padding-right: 65px;
-	}
-
-	&--gutters-large > div {
-		padding-right: 100px;
-	}
-
-	&--gutters-small > div {
-		padding-right: 45px;
-	}
-
-	&__b-margin-until-medium {
-		margin-bottom: 1rem;
-	}
-
 	&__small-3 {
 		float: left;
 		width: 25%;
@@ -130,10 +97,6 @@
 	}
 
 	@mixin atLarge {
-
-		&__b-margin-until-large {
-			margin-bottom: 0;
-		}
 
 		&__large-4 {
 			float: left;

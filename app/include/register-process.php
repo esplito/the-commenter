@@ -22,19 +22,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	if(count($errors) === 0){
 		if(isset($_POST['email'], $_POST['username'], $_POST['password'])){
-			$servername = "localhost";
-			$dbuser = "";
-			$dbpw = "";
-			$dbname = "test";
-
-
-			// Create connection
-			$conn = new mysqli($servername, $dbuser, $dbpw, $dbname);
-
-			// Check connection
-			if ($conn->connect_error) {
-			    die("Connection failed: " . $conn->connect_error);
-			} 
+			
+			require 'connect.php'; 
 
 			$username = mysqli_real_escape_string($conn, $_POST['username']);
 			$email = mysqli_real_escape_string($conn,$_POST['email']);
