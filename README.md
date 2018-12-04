@@ -21,33 +21,33 @@ The site is responsive and built with HTML, CSS, php, SQL, JavaScript and jQuery
 
 **Login Page**
 
-![Login Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/login_page.PNG)
+![Login Page](https://raw.githubusercontent.com/esplito/the-commenter/master/screenshots/login_page.PNG)
 
 **Register Page**
 
-![Register Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/register_page.PNG)
+![Register Page](https://raw.githubusercontent.com/esplito/the-commenter/master/screenshots/register_page.PNG)
 
 **Registration successful**
 
-![Register Successful](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/register_page_success.PNG)
+![Register Successful](https://raw.githubusercontent.com/esplito/the-commenter/master/screenshots/register_page_success.PNG)
 
 **Comment/Feed Page**
 
-![Comment/Feed Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/feed_page.PNG)
+![Comment/Feed Page](https://raw.githubusercontent.com/esplito/the-commenter/master/screenshots/feed_page.PNG)
 
 
 ## Mobile Screenshots
 
 **Login Page**
 
-![Login Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/mobile_login.PNG)
+![Login Page](https://raw.githubusercontent.com/esplito/the-commenter/master/screenshots/mobile_login.PNG)
 
 **Register Page**
 
-![Register Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/mobile_register.PNG)
+![Register Page](https://raw.githubusercontent.com/esplito/the-commenter/master/screenshots/mobile_register.PNG)
 
 **Comment/Feed Page**
 
-![Comment/Feed Page](https://raw.githubusercontent.com/esplito/literature-site/master/screenshots/feed_page_mobile.PNG)
+![Comment/Feed Page](https://raw.githubusercontent.com/esplito/the-commenter/master/screenshots/feed_page_mobile.PNG)
 
 
